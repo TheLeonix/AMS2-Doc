@@ -1,0 +1,16 @@
+.Heart
+{
+    color: red;
+}
+.Flex
+{
+    display: flex;
+    justify-content: center;
+}
+.Footer
+{
+    background-color: rgb(70, 70, 70);
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
