@@ -1,20 +1,106 @@
-.Heart
-{
+a {
+    text-decoration: none !important ;
+    color: inherit !important ;
+}
+
+.Heart {
     color: red;
 }
-.Flex
-{
+
+.Flex {
     display: flex;
     justify-content: center;
 }
-.Footer
-{
+
+.Footer {
     background-color: rgb(70, 70, 70);
     color: white;
     padding-top: 1px;
     padding-bottom: 10px;
 }
-.Header
-{
+
+.Header {
     background-color: rgb(177, 177, 177);
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('.././img/backgroundIndex.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Navbar */
+.NavbarIndex {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 1.2s ease;
+}
+
+.NavbarIndex.transparent {
+    background-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.2s ease, background-color 1.2s ease;
+}
+
+.NavbarIndex.solid {
+    background-color: #f0f0f0;
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.NavbarIndex a {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+.NavbarIndex .logo {
+    font-weight: bold;
+}
+
+.content {
+    height: 150vh;
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.cardText {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
