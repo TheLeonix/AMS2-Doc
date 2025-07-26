@@ -240,8 +240,8 @@ pre {
 @media (max-width: 576px) {
     .exampleImg
     {
-        width: 145px;
-        height: 200px;
+        width: 200px;
+        height: 145px;
     }
 }
 
