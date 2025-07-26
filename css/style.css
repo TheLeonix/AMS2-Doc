@@ -1,6 +1,6 @@
 a {
-    text-decoration: none !important ;
-    color: inherit !important ;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 .Heart {
@@ -20,7 +20,7 @@ a {
 }
 
 .Header {
-    background-color: rgb(177, 177, 177);
+    background-color: #f0f0f0;
 }
 
 .hero {
@@ -54,6 +54,7 @@ a {
 /* Navbar */
 .NavbarIndex {
     position: fixed;
+    background-color: #f0f0f0;
     top: 0;
     width: 100%;
     padding: 1rem 2rem;
@@ -103,4 +104,120 @@ a {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.Icon {
+    height: 60px;
+    width: 60px;
+}
+
+.NavbarList {
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 1.2s ease;
+}
+
+.NavbarList.transparent {
+    background-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.2s ease, background-color 1.2s ease;
+}
+
+.NavbarList.solid {
+    background-color: #f0f0f0;
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.NavbarList a {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+.NavbarList .logo {
+    font-weight: bold;
+}
+
+.hFlex {
+    display: flex;
+    align-items: center;
+}
+
+.cardListB {
+    border: 2px solid black;
+    border-radius: 20px;
+    max-width: 300px;
+}
+
+code {
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-family: monospace;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.Link {
+    color: rgb(17, 17, 255);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.Tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.Tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    border: 2px solid black;
+    padding: 15px;
+    font-size: small;
+
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.Tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.P {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

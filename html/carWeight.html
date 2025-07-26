@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMS2 Modding Tutorial - Edit Vehicle Weight</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+  <div class="Header">
+    <nav class="NavbarIndex" id="NavbarIndex">
+      <div class="container-fluid">
+        <a class="NavbarIndex-brand col-2" href="../index.html">Automobilista 2 Docs</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container py-5">
+    <div class="bg-white p-5 rounded shadow-sm">
+      <h1 class="mb-4 Flex">Edit Car Weight</h1>
+
+      <h2>Requirements</h2>
+      <ul>
+        <li><a href="https://mh-nexus.de/en/hxd/" target="_blank">
+            <div class="Link">HxD Hex Editor</div>
+          </a></li>
+        <li>The target <code class="Tooltip">cdfbin
+          <div class="tooltiptext">
+            <h3>Where?</h3>
+            <div>yourMod/Vehicles/Physics/Chassis/yourCar.cdfbin</div>
+          </div>
+        </code> file from AMS2</li>
+      </ul>
+
+      <h2 class="mt-4">Step-by-step Instructions</h2>
+
+      <h4>1. Open the <code class="Tooltip">cdfbin
+          <div class="tooltiptext">
+            <h3>Where?</h3>
+            <div>yourMod/Vehicles/Physics/Chassis/yourCar.cdfbin</div>
+          </div>
+        </code> file with HxD</h4>
+      <div class="P">Launch HxD and open the <code class="Tooltip">cdfbin
+        <div class="tooltiptext">
+            <h3>Where?</h3>
+            <div>yourMod/Vehicles/Physics/Chassis/yourCar.cdfbin</div>
+        </div>
+      </code> file related to the car you want to edit.</div>
+
+      <h4>2. Search for the specific hex pattern</h4>
+      <p>Use <strong>Ctrl + F</strong> and set the search type to <strong>Hex-values</strong> and set the Search Direction to <strong>All</strong>. Then search for one of
+        the following patterns:</p>
+      <pre>
+22 67 0B 57 AB <code class="Tooltip">Float</code>
+or
+21 67 0B 57 AB <code class="Tooltip">Integer</code>
+      </pre>
+      <p>These patterns may vary depending on the version of the file or vehicle.</p>
+
+      <h4>3. Modify the weight (KG) value</h4>
+      <p>After finding the correct pattern, locate the float value that represents the weight, which follows the
+        pattern. Modify it accordingly.</p>
+      <p>The weight is stored in <strong>little-endian float format</strong>. For example:</p>
+      <pre>
+00 00 48 42 = 50.0 KG
+00 00 96 43 = 300.0 KG
+      </pre>
+      <p>You can use this <a href="https://gregstoll.com/~gregstoll/floattohex/" target="_blank">Float ↔ Hex
+          Converter</a> to find the correct value.</p>
+
+      <h4>4. Save the changes</h4>
+      <p>After editing the value, go to <strong>File > Save</strong> or press <strong>Ctrl + S</strong> to save your
+        modifications.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
