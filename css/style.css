@@ -215,6 +215,31 @@ pre {
     transition: opacity 1s;
     
 }
+@media (max-width: 576px) {
+    .Tooltip .tooltiptext {
+        width: 300px;
+    }
+    .Tooltip .tooltiptext.Q
+    {
+        transform: translateX(-40%);
+    }
+    .Tooltip .tooltiptext.C
+    {
+        transform: translateX(-50%);
+    }
+    .Tooltip .tooltiptext.S
+    {
+        transform: translateX(-60%);
+    }
+    .Tooltip .tooltiptext.Se
+    {
+        transform: translateX(-70%);
+    }
+    .Tooltip .tooltiptext.O
+    {
+        transform: translateX(-80%);
+    }
+}
 
 .Tooltip:hover .tooltiptext {
     visibility: visible;
