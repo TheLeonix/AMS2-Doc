@@ -207,7 +207,7 @@ pre {
     border: 2px solid black;
     padding: 15px;
     font-size: small;
-
+    white-space: nowrap;
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
@@ -221,4 +221,15 @@ pre {
 .P {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.example
+{
+    font-size: 12px;
+}
+
+.exampleImg
+{
+    width: 290;
+    height: 400;
 }
