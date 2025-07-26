@@ -54,22 +54,25 @@
       <p>Use <strong>Ctrl + F</strong> and set the search type to <strong>Hex-values</strong> and set the Search Direction to <strong>All</strong>. Then search for one of
         the following patterns:</p>
       <pre>
-22 67 0B 57 AB <code class="Tooltip">Float</code>
+22 67 0B 57 AB <code class="Tooltip">Float<div class="tooltiptext">
+            <h3>What?</h3>
+            <div></div>
+        </div></code>
 or
-21 67 0B 57 AB <code class="Tooltip">Integer</code>
+21 67 0B 57 AB <code class="Tooltip">Integer<div class="tooltiptext">
+            <h3>What?</h3>
+        </div></code>
       </pre>
       <p>These patterns may vary depending on the version of the file or vehicle.</p>
 
       <h4>3. Modify the weight (KG) value</h4>
       <p>After finding the correct pattern, locate the float value that represents the weight, which follows the
         pattern. Modify it accordingly.</p>
-      <p>The weight is stored in <strong>little-endian float format</strong>. For example:</p>
+      <!-- <p>The weight is stored in <strong>little-endian float format</strong>. For example:</p> -->
       <pre>
-00 00 48 42 = 50.0 KG
-00 00 96 43 = 300.0 KG
+48 42 00 00 = 50.0 KG
+96 43 00 00 = 300.0 KG
       </pre>
-      <p>You can use this <a href="https://gregstoll.com/~gregstoll/floattohex/" target="_blank">Float ↔ Hex
-          Converter</a> to find the correct value.</p>
 
       <h4>4. Save the changes</h4>
       <p>After editing the value, go to <strong>File > Save</strong> or press <strong>Ctrl + S</strong> to save your
