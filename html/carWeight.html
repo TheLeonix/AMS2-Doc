@@ -72,17 +72,29 @@ or
       <p class="mt-3">These patterns may vary depending on the version of the file or vehicle.</p>
 
       <h4>3. Modify the weight (KG) value</h4>
-      <p>After finding the correct pattern, locate the float value that represents the weight, which follows the
-        pattern. Modify it accordingly.</p>
-      <!-- <p>The weight is stored in <strong>little-endian float format</strong>. For example:</p> -->
-      <pre>
-48 42 00 00 = 50.0 KG
-96 43 00 00 = 300.0 KG
-      </pre>
+      <div>AMS2 uses <code class="Tooltip">little-endian
+        <div class="tooltiptext S">
+          <h3>What?</h3>
+          <div><code>Little Endian</code> is a way of storing multi-byte data where the least significant byte comes first (at the lowest memory address). For example, the 32-bit value 0x12345678 would be stored as 78 56 34 12 in memory.</div>
+        </div>
+      </code> for data, be careful to use this setting at the bottom right. <br>
+        After finding the correct pattern, locate the value that represents the weight, which follows the
+        pattern. Highlight it.</div>
+        <h5 class="mt-4">Integer</h5>
+        <img class="exampleImg" src="../img/tutorialPhotos/carWeight_3_1.png" alt="">
+        <div class="example">In yellow, the pattern for the Int Weight, in Blue the 8 bits that needs to Highlighted</div>
+        <img class="exampleImg mt-4" src="../img/tutorialPhotos/carWeight_3_2.png" alt="">
+        <div class="example">Edit the value next to the blue Highlight. Make sure you have selected Little Endian!</div>
+        <h5 class="mt-5">Float</h5>
+        <img class="exampleImg" src="../img/tutorialPhotos/carWeight_3_3.png" alt="">
+        <div class="example">In yellow, the pattern for the Float Weight, in Blue the 8 bits that needs to Highlighted</div>
+        <img class="exampleImg mt-4" src="../img/tutorialPhotos/carWeight_3_4.png" alt="">
+        <div class="example">Edit the value next to the blue Highlight. Make sure you have selected Little Endian!</div>
 
-      <h4>4. Save the changes</h4>
+      <h4 class="mt-5">4. Save the changes</h4>
       <p>After editing the value, go to <strong>File > Save</strong> or press <strong>Ctrl + S</strong> to save your
         modifications.</p>
+        <p>Then load your mod, and enjoy!</p>
 
     </div>
   </div>
