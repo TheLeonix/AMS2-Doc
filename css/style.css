@@ -207,10 +207,13 @@ pre {
     border: 2px solid black;
     padding: 15px;
     font-size: small;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 370px;
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
+    
 }
 
 .Tooltip:hover .tooltiptext {
@@ -230,6 +233,15 @@ pre {
 
 .exampleImg
 {
-    width: 290;
-    height: 400;
+    width: 400px;
+    height: 290px;
 }
+
+@media (max-width: 576px) {
+    .exampleImg
+    {
+        width: 145px;
+        height: 200px;
+    }
+}
+
